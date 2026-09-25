@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Shop all cozy plushies and dreamy accessories from Yume Land.">
+	<title>Yume Land | Shop</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<a class="skip-link" href="#main-content">Skip to main content</a>
+
+	<header class="site-header container-fluid">
+		<a class="brand" href="index.html" aria-label="Yume Land home">夢.</a>
+		<nav class="site-nav" aria-label="Primary navigation">
+			<a class="site-nav-link" href="index.html">home</a>
+			<a class="site-nav-link active" href="shop.html" aria-current="page">shop</a>
+			<a class="site-nav-link" href="about.html">about</a>
+		</nav>
+		<a class="cart-link" href="#cart" aria-label="Shopping cart, 0 items">
+			<i class="bi bi-cart3 cart-icon" aria-hidden="true"></i>
+		</a>
+	</header>
+
+	<main id="main-content">
+		<section class="arrivals shop-layout" aria-labelledby="shop-title">
+			<aside class="shop-filters" aria-label="Product categories">
+				<h3>Filter by category</h3>
+				<div class="filter-group">
+					<button class="filter-btn active" type="button" data-filter="all">All products</button>
+					<button class="filter-btn" type="button" data-filter="puchinuis">Puchinuis</button>
+					<button class="filter-btn" type="button" data-filter="nesoberis">Nesoberis</button>
+					<button class="filter-btn" type="button" data-filter="others">Others</button>
+				</div>
+			</aside>
+
+			<div class="shop-content">
+
+				<div class="product-grid">
+					<article class="product-card" data-category="puchinuis">
+						<a class="product-image" href="#product-one" aria-label="View Puchinui">
+							<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80" alt="Puchinui 'BanG Dream Ave Mujica' Sakiko Togawa Wolf Ver.">
+						</a>
+						<div class="product-details" id="product-one">
+							<h3>Puchinui "BanG Dream Ave Mujica" Sakiko Togawa Wolf Ver.</h3>
+							<p>$24.00</p>
+						</div>
+					</article>
+
+					<article class="product-card" data-category="nesoberis">
+						<a class="product-image" href="#product-two" aria-label="View Sleepy Bear plushie">
+							<img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=900&q=80" alt="Sleepy Bear plushie">
+						</a>
+						<div class="product-details" id="product-two">
+							<h3>Sleepy Bear</h3>
+							<p>$28.00</p>
+						</div>
+					</article>
+
+					<article class="product-card" data-category="others">
+						<a class="product-image" href="#product-three" aria-label="View Moon Cat plushie">
+							<img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?auto=format&fit=crop&w=900&q=80" alt="Moon Cat plushie">
+						</a>
+						<div class="product-details" id="product-three">
+							<h3>Moon Cat</h3>
+							<p>$26.00</p>
+						</div>
+					</article>
+                    
+
+					<article class="product-card" data-category="plushies">
+						<a class="product-image" href="#product-five" aria-label="View Peach Puppy plushie">
+							<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80" alt="Peach Puppy plushie">
+						</a>
+						<div class="product-details" id="product-five">
+							<h3>Peach Puppy</h3>
+							<p>$30.00</p>
+						</div>
+					</article>
+
+					<article class="product-card" data-category="decor">
+						<a class="product-image" href="#product-six" aria-label="View Dreamy Fox plushie">
+							<img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?auto=format&fit=crop&w=900&q=80" alt="Dreamy Fox plushie">
+						</a>
+						<div class="product-details" id="product-six">
+							<h3>Dreamy Fox</h3>
+							<p>$27.00</p>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="about" id="about" aria-labelledby="about-title">
+			<h2 id="about-title">Made for soft days</h2>
+			<p>Small comforts, carefully chosen for your cozy corner.</p>
+		</section>
+	</main>
+
+	<script>
+		const filterButtons = document.querySelectorAll('.filter-btn');
+		const productCards = document.querySelectorAll('.product-card');
+
+		filterButtons.forEach((button) => {
+			button.addEventListener('click', () => {
+				const selected = button.dataset.filter;
+
+				filterButtons.forEach((btn) => btn.classList.toggle('active', btn === button));
+
+				productCards.forEach((card) => {
+					const matches = selected === 'all' || card.dataset.category === selected;
+					card.hidden = !matches;
+				});
+			});
+		});
+	</script>
+</body>
+</html>
