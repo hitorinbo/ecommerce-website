@@ -19,12 +19,26 @@
 			<a class="site-nav-link" href="shop.html">shop</a>
 			<a class="site-nav-link" href="about.html">about</a>
 		</nav>
-		<a class="cart-link" href="#cart" aria-label="Shopping cart, 0 items">
+		<button class="cart-link" type="button" aria-label="Shopping cart, 0 items" aria-haspopup="dialog" aria-controls="cart-modal">
 			<i class="bi bi-cart3 cart-icon" aria-hidden="true"></i>
-		</a>
+			<span class="cart-count" aria-hidden="true">0</span>
+		</button>
 	</header>
 
 	<main id="main-content">
+		<section class="product-page" id="product-view" aria-labelledby="product-view-title" hidden>
+			<button class="product-button secondary product-back" type="button" data-product-back>Back to products</button>
+			<div class="product-page-inner">
+				<div class="product-page-image-wrap"><img class="product-page-image" id="product-view-image" src="" alt=""></div>
+				<div class="product-page-info">
+					<span class="eyebrow" id="product-view-category"></span>
+					<h1 id="product-view-title"></h1>
+					<p class="product-price" id="product-view-price"></p>
+					<p id="product-view-description"></p>
+					<button class="product-button" type="button" data-cart-add-detail>Add to cart</button>
+				</div>
+			</div>
+		</section>
 		<section class="hero" aria-labelledby="hero-title">
 			<div class="hero-layout container">
 				<div class="hero-content">
@@ -38,54 +52,54 @@
 			</div>
 		</section>
 
-		<section class="arrivals" id="new-arrivals" aria-labelledby="arrivals-title">
+		<section class="arrivals" id="products" aria-labelledby="arrivals-title">
 			<div class="section-heading">
 				<h2 id="arrivals-title">New arrivals</h2>
 			</div>
 			<div class="product-grid container">
-				<article class="product-card" data-product="sakikoWolf">
-					<a class="product-image product-image-one" href="#sakiko-wolf" aria-label="View Puchinui Sakiko Togawa Wolf Ver." data-product-trigger="sakikoWolf">
-						<img src="https://bushiroad-global-online-store.com/cdn/shop/files/avm_okami_putish_05_kaigai_ari.jpg?v=1769623765" alt="Puchinui Sakiko Togawa Wolf Ver.">
+				<article class="product-card" data-product="sakikoWolf" data-product-id="sakikoWolf">
+					<a class="product-image product-image-one" href="#product-view-sakikoWolf" aria-label="View Puchishu Sakiko Togawa Wolf Ver." data-product-view>
+						<img src="images/sakikoWolf.jpg" alt="Puchishu Sakiko Togawa Wolf Ver.">
 					</a>
 					<div class="product-details" id="sakiko-wolf">
-						<h3>Puchinui "BanG Dream Ave Mujica" Sakiko Togawa Wolf Ver.</h3>
-						<p>$15.00</p>
+						<h3>Puchishu "BanG Dream Ave Mujica" Sakiko Togawa Wolf Ver.</h3>
+						<p>$24.00</p>
 					</div>
 				</article>
-				<article class="product-card">
-					<a class="product-image product-image-two" href="#mutsumi-wolf" aria-label="View Puchinui Mutsumi Wakaba Wolf Ver.">
-						<img src="https://bushiroad-global-online-store.com/cdn/shop/files/avm_okami_putish_02_kaigai_ari.jpg?v=1769623765" alt="Puchinui Sakiko Togawa Wolf Ver.">
+				<article class="product-card" data-product="mutsumiWolf" data-product-id="mutsumiWolf">
+					<a class="product-image product-image-two" href="#product-view-mutsumiWolf" aria-label="View Puchishu Mutsumi Wakaba Wolf Ver." data-product-view>
+						<img src="https://bushiroad-global-online-store.com/cdn/shop/files/avm_okami_putish_02_kaigai_ari.jpg?v=1769623765" alt="Puchishu Mutsumi Wakaba Wolf Ver.">
 					</a>
 					<div class="product-details" id="mutsumi-wolf">
-						<h3>Puchinui "BanG Dream Ave Mujica" Mutsumi Wakaba Wolf Ver.</h3>
-						<p>$15.00</p>
+						<h3>Puchishu "BanG Dream Ave Mujica" Mutsumi Wakaba Wolf Ver.</h3>
+						<p>$24.00</p>
 					</div>
 				</article>
-				<article class="product-card">
-					<a class="product-image product-image-three" href="#umiri-wolf" aria-label="View Puchinui Umiri Yahata Wolf Ver.">
-						<img src="https://bushiroad-global-online-store.com/cdn/shop/files/avm_okami_putish_03_kaigai_ari.jpg?v=1769623765" alt="Puchinui Umiri Yahata Wolf Ver.">
+				<article class="product-card" data-product="umiriWolf" data-product-id="umiriWolf">
+					<a class="product-image product-image-three" href="#product-view-umiriWolf" aria-label="View Puchishu Umiri Yahata Wolf Ver." data-product-view>
+						<img src="https://bushiroad-global-online-store.com/cdn/shop/files/avm_okami_putish_03_kaigai_ari.jpg?v=1769623765" alt="Puchishu Umiri Yahata Wolf Ver.">
 					</a>
 					<div class="product-details" id="umiri-wolf">
-						<h3>Puchinui "BanG Dream Ave Mujica" Umiri Yahata Wolf Ver.</h3>
-						<p>$15.00</p>
+						<h3>Puchishu "BanG Dream Ave Mujica" Umiri Yahata Wolf Ver.</h3>
+						<p>$24.00</p>
 					</div>
 				</article>
-				<article class="product-card">
-					<a class="product-image product-image-three" href="#nyamu-wolf" aria-label="View Puchinui Nyamu Yutenji Wolf Ver.">
-						<img src="https://bushiroad-global-online-store.com/cdn/shop/files/avm_okami_putish_04_kaigai_ari.jpg?v=1769623765" alt="Puchinui Nyamu Yutenji Wolf Ver.">
+				<article class="product-card" data-product="nyamuWolf" data-product-id="nyamuWolf">
+					<a class="product-image product-image-three" href="#product-view-nyamuWolf" aria-label="View Puchishu Nyamu Yutenji Wolf Ver." data-product-view>
+						<img src="https://bushiroad-global-online-store.com/cdn/shop/files/avm_okami_putish_04_kaigai_ari.jpg?v=1769623765" alt="Puchishu Nyamu Yutenji Wolf Ver.">
 					</a>
 					<div class="product-details" id="nyamu-wolf">
-						<h3>Puchinui "BanG Dream Ave Mujica" Nyamu Yutenji Wolf Ver.</h3>
-						<p>$15.00</p>
+						<h3>Puchishu "BanG Dream Ave Mujica" Nyamu Yutenji Wolf Ver.</h3>
+						<p>$24.00</p>
 					</div>
 				</article>
-				<article class="product-card">
-					<a class="product-image product-image-three" href="#uika-wolf" aria-label="View Puchinui Uika Misumi Wolf Ver.">
-						<img src="https://bushiroad-global-online-store.com/cdn/shop/files/avm_okami_putish_01_kaigai_ari.jpg?v=1769623765" alt="Puchinui Uika Misumi Wolf Ver.">
+				<article class="product-card" data-product="uikaWolf" data-product-id="uikaWolf">
+					<a class="product-image product-image-three" href="#product-view-uikaWolf" aria-label="View Puchishu Uika Misumi Wolf Ver." data-product-view>
+						<img src="https://bushiroad-global-online-store.com/cdn/shop/files/avm_okami_putish_01_kaigai_ari.jpg?v=1769623765" alt="Puchishu Uika Misumi Wolf Ver.">
 					</a>
 					<div class="product-details" id="uika-wolf">
-						<h3>Puchinui "BanG Dream Ave Mujica" Uika Misumi Wolf Ver.</h3>
-						<p>$15.00</p>
+						<h3>Puchishu "BanG Dream Ave Mujica" Uika Misumi Wolf Ver.</h3>
+						<p>$24.00</p>
 					</div>
 				</article>
 			</div>
@@ -97,85 +111,21 @@
 		</section>
 	</main>
 
-	<div id="product-modal" class="product-modal" aria-hidden="true">
-		<div class="product-modal-panel" role="dialog" aria-modal="true" aria-labelledby="product-modal-title">
-			<button class="product-modal-close" type="button" aria-label="Close product details">×</button>
-			<div class="product-modal-content">
-				<div class="product-modal-image-wrap">
-					<img id="product-modal-image" src="" alt="">
-				</div>
-				<div class="product-modal-info">
-					<span class="eyebrow">New Arrival</span>
-					<h2 id="product-modal-title">Puchinui "BanG Dream Ave Mujica" Sakiko Togawa Wolf Ver.</h2>
-					<p id="product-modal-description">A soft, collectible wolf-themed figure with a dramatic color palette and dreamy studio styling.</p>
-					<div id="product-modal-price" class="product-price">$15.00</div>
-					<div class="product-actions">
-						<a class="product-button" href="#buy">Add to cart</a>
-						<button class="product-button secondary" type="button" data-close-modal>Back to shop</button>
-					</div>
-				</div>
-			</div>
-		</div>
+	<div id="cart-modal" class="cart-modal" aria-hidden="true">
+		<section class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cart-title" tabindex="-1">
+			<header class="cart-panel-header">
+				<h2 id="cart-title">Your cart <span class="cart-item-count">(0)</span></h2>
+				<button class="cart-close" type="button" aria-label="Close cart">&times;</button>
+			</header>
+			<div class="cart-items" aria-live="polite"></div>
+			<p class="cart-empty">Your cart is waiting for something cozy.</p>
+			<footer class="cart-footer">
+				<div class="cart-subtotal"><span>Subtotal</span><strong>$0.00</strong></div>
+			</footer>
+		</section>
 	</div>
 
-	<script>
-		const productData = {
-			sakikoWolf: {
-				image: 'https://bushiroad-global-online-store.com/cdn/shop/files/avm_okami_putish_05_kaigai_ari.jpg?v=1769623765',
-				title: 'Puchinui "BanG Dream Ave Mujica" Sakiko Togawa Wolf Ver.',
-				description: 'A soft, collectible wolf-themed figure with a dramatic color palette and dreamy studio styling.',
-				price: '$15.00'
-			}
-		};
-
-		const modal = document.getElementById('product-modal');
-		const modalImage = document.getElementById('product-modal-image');
-		const modalTitle = document.getElementById('product-modal-title');
-		const modalDescription = document.getElementById('product-modal-description');
-		const modalPrice = document.getElementById('product-modal-price');
-		const closeButtons = document.querySelectorAll('[data-close-modal], .product-modal-close');
-		const triggerButtons = document.querySelectorAll('[data-product-trigger]');
-
-		function openProductModal(key) {
-			const product = productData[key];
-			if (!product) return;
-
-			modalImage.src = product.image;
-			modalImage.alt = product.title;
-			modalTitle.textContent = product.title;
-			modalDescription.textContent = product.description;
-			modalPrice.textContent = product.price;
-			modal.classList.add('is-open');
-			modal.setAttribute('aria-hidden', 'false');
-		}
-
-		function closeProductModal() {
-			modal.classList.remove('is-open');
-			modal.setAttribute('aria-hidden', 'true');
-		}
-
-		triggerButtons.forEach((button) => {
-			button.addEventListener('click', (event) => {
-				event.preventDefault();
-				openProductModal(button.dataset.productTrigger);
-			});
-		});
-
-		closeButtons.forEach((button) => {
-			button.addEventListener('click', closeProductModal);
-		});
-
-		modal.addEventListener('click', (event) => {
-			if (event.target === modal) {
-				closeProductModal();
-			}
-		});
-
-		document.addEventListener('keydown', (event) => {
-			if (event.key === 'Escape' && modal.classList.contains('is-open')) {
-				closeProductModal();
-			}
-		});
-	</script>
+	<script src="js/product-view.js"></script>
+	<script src="js/cart.js"></script>
 </body>
 </html>
